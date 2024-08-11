@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ChatWindow from './ChatWindow';
-import ChatInput from './ChatInput';
-import { getBotResponse } from '../utils/nlp';
+import ChatWindow from './ChatWindow.js';
+import ChatInput from './ChatInput.js';
+import { getBotResponse } from '../utils/nlp.js';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
