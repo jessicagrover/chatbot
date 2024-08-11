@@ -1,0 +1,34 @@
+name: CI
+
+# Triggers the workflow on push or pull request events
+on:
+  push:
+    branches:
+      - prod
+  pull_request:
+    branches:
+      - prod
+
+jobs:
+  build:
+
+    # Runs the job on the latest Ubuntu runner
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build project
+      run: npm run build
