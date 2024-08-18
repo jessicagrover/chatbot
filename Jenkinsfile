@@ -4,7 +4,7 @@ pipeline {
     environment {
         NODE_VERSION = 'v20.12.2'  // Specify the Node.js version
         DEPLOYMENT_SERVER = 'jessicagrover@localhost'  // Replace with your server's SSH details
-        DEPLOYMENT_PATH = '/Users/jessicagrover/chatbot'
+        DEPLOYMENT_PATH = '/Users/jessicagrover/Chatbot'
     }
 
     stages {
